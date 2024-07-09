@@ -3,7 +3,7 @@ import { TabsDemo } from './Tabs'
 
 const Hero = () => {
   return (
-    <div>
+    <div className='flex w-full '>
       <TabsDemo />
     </div>
   )
