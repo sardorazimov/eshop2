@@ -9,30 +9,36 @@ import {
 } from "@/components/ui/animated-modal";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 
-export function AnimatedModalDemo() {
+export function ModalHero() {
   const images = [
-    "",
+    "/product.jpg",
+    "/product.jpg",
+    "/product.jpg",
+    "/product.jpg",
+    "/product.jpg",
   ];
+  const router = useRouter()
   return (
     <div className="py-40  flex items-center justify-center">
       <Modal>
         <ModalTrigger className="bg-black dark:bg-white dark:text-black text-white flex justify-center group/modal-btn">
           <span className="group-hover/modal-btn:translate-x-40 text-center transition duration-500">
-            Book your flight
+            Shop E Commerce
           </span>
           <div className="-translate-x-40 group-hover/modal-btn:translate-x-0 flex items-center justify-center absolute inset-0 transition duration-500 text-white z-20">
-            ✈️
+            📲📳💻
           </div>
         </ModalTrigger>
         <ModalBody>
           <ModalContent>
             <h4 className="text-lg md:text-2xl text-neutral-600 dark:text-neutral-100 font-bold text-center mb-8">
-              Book your trip to{" "}
+              Search your Website{" "}
               <span className="px-1 py-0.5 rounded-md bg-gray-100 dark:bg-neutral-800 dark:border-neutral-700 border border-gray-200">
-                Bali
+                Shop.1
               </span>{" "}
-              now! ✈️
+              now! 💻
             </h4>
             <div className="flex justify-center items-center">
               {images.map((image, idx) => (
@@ -58,7 +64,7 @@ export function AnimatedModalDemo() {
                     alt="bali images"
                     width="500"
                     height="500"
-                    className="rounded-lg h-20 w-20 md:h-40 md:w-40 object-cover flex-shrink-0"
+                    className="rounded-lg h-20 w-20 md:h-40 md:w-40 object-contain flex-shrink-0"
                   />
                 </motion.div>
               ))}
@@ -67,37 +73,37 @@ export function AnimatedModalDemo() {
               <div className="flex  items-center justify-center">
                 <PlaneIcon className="mr-1 text-neutral-700 dark:text-neutral-300 h-4 w-4" />
                 <span className="text-neutral-700 dark:text-neutral-300 text-sm">
-                  5 connecting flights
+                  Customer 
                 </span>
               </div>
               <div className="flex items-center justify-center">
                 <ElevatorIcon className="mr-1 text-neutral-700 dark:text-neutral-300 h-4 w-4" />
                 <span className="text-neutral-700 dark:text-neutral-300 text-sm">
-                  12 hotels
+                  Amazing
                 </span>
               </div>
               <div className="flex items-center justify-center">
                 <VacationIcon className="mr-1 text-neutral-700 dark:text-neutral-300 h-4 w-4" />
                 <span className="text-neutral-700 dark:text-neutral-300 text-sm">
-                  69 visiting spots
+                  More Akksesuar
                 </span>
               </div>
               <div className="flex  items-center justify-center">
                 <FoodIcon className="mr-1 text-neutral-700 dark:text-neutral-300 h-4 w-4" />
                 <span className="text-neutral-700 dark:text-neutral-300 text-sm">
-                  Good food everyday
+                  Good every
                 </span>
               </div>
               <div className="flex items-center justify-center">
                 <MicIcon className="mr-1 text-neutral-700 dark:text-neutral-300 h-4 w-4" />
                 <span className="text-neutral-700 dark:text-neutral-300 text-sm">
-                  Open Mic
+                  Open 24/7 Service
                 </span>
               </div>
               <div className="flex items-center justify-center">
                 <ParachuteIcon className="mr-1 text-neutral-700 dark:text-neutral-300 h-4 w-4" />
                 <span className="text-neutral-700 dark:text-neutral-300 text-sm">
-                  Paragliding
+                  Price
                 </span>
               </div>
             </div>
@@ -106,8 +112,9 @@ export function AnimatedModalDemo() {
             <button className="px-2 py-1 bg-gray-200 border border-gray-300 rounded-md text-sm w-28">
               Cancel
             </button>
-            <button className="bg-black text-white text-sm px-2 py-1 rounded-md border border-black w-28">
-              Book Now
+            <button  onClick={() => router.push('/dashboard')}
+            className="bg-black text-white text-sm px-2 py-1 rounded-md border border-black w-28">
+              Dashboard
             </button>
           </ModalFooter>
         </ModalBody>

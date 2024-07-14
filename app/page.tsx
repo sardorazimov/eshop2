@@ -1,13 +1,15 @@
 import Hero from "@/components/Hero";
+import { ModalHero } from "@/components/providers/Modal";
+
 import { Tool } from "@/components/Tool";
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
+
 
 export default function Home() {
   return (
     <div>
       <main className="flex  flex-col items-center justify-between p-24">
-        <h1 className="text-8xl text-center text-muted-foregroun text-semibold">
+        <h1 className="text-8xl text-center text-muted-foreground font-extrabold">
           Service catalog App Market  Online Stores
         </h1>
          <span className="text-muted-foreground text-xl my-4">
@@ -16,7 +18,11 @@ export default function Home() {
         <div className="flex gap-5 p-4 my-4 py-3">
          <Tool />
         </div>
-
+        <div>
+          <>
+            <ModalHero />
+          </>
+        </div>
       </main>
       <Hero />
     </div>

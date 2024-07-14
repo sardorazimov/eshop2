@@ -8,7 +8,7 @@ const Logo = () => {
     <div className='flex w-full h-full md:items-center md:justify-center '>
        <Link href={'/'} className='flex gap-2 '>
         <img  src='/Logo.svg' className='text-red-400' />
-        <h1 className='text-3xl text-slate-900'>Shop.1</h1>
+        <h1 className='text-3xl text-slate-900 font-semibold'>Shop.1</h1>
        </Link>
     </div>
   )

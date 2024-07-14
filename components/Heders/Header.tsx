@@ -1,11 +1,17 @@
+'use client'
 import React from 'react'
 import Logo from './Logo'
 import Navs from './Navs'
 import Socials from './Socials'
 import { Button } from '../ui/button'
 import Mobile from './Mobile'
+import { useRouter } from 'next/navigation'
 
 const Header = () => {
+
+  const router = useRouter(
+    ///
+  )
   return (
     <div className='flex w-full p-2 h-20  border-b bg-white border-zinc-600 '>
       <div className='flex'>
@@ -19,7 +25,8 @@ const Header = () => {
         <Socials />
       </div>
       <div className=' items-center justify-center gap-3 hidden lg:flex'>
-        <Button >Login</Button>
+        <Button onClick={() => router.push('/home')}
+        >Login</Button>
         <Button >Docs</Button>
       </div> 
         </div>

@@ -3,6 +3,8 @@
 
 import Image from "next/image";
 import { Tabs } from "./ui/tabs";
+import Servise from "./tabs/servise";
+import { Content } from "./tabs/Content";
 
 export function TabsDemo() {
   const tabs = [
@@ -22,7 +24,7 @@ export function TabsDemo() {
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
           <p>Services tab</p>
-          
+          <Servise />
         </div>
       ),
     },
@@ -32,7 +34,7 @@ export function TabsDemo() {
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
           <p>Playground tab</p>
-          <DummyContent />
+          <Content/>
         </div>
       ),
     },

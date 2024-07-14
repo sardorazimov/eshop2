@@ -5,7 +5,7 @@ const Servise = () => {
   return (
     <div className='flex m-12'>
       <div>
-        <img src="/phone15.png" alt="Service" className='object-cover' />
+        <img src="/apple15.png" alt="Service" className='object-contain' />
       </div>
     </div>
   )
