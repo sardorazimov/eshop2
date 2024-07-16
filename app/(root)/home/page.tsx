@@ -1,8 +1,11 @@
+import Link from "next/link"
+
 const  page = () => {
     return (
-      <div>
-     
+      <div className="flex ">
+      <Link href={"+"}></Link>
       </div>
+
     )
   }
   export default page
